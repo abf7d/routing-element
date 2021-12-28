@@ -1,0 +1,12 @@
+{
+    "name": "custom-elements",
+    "version": "0.0.1",
+    "peerDependencies": {
+      "@angular/common": "^12.0.4",
+      "@angular/core": "^12.0.4",
+      "@ngrx/store": "^12.1.0"
+    },
+    "dependencies": {
+      "tslib": "^1.10.0"
+    }
+  }
