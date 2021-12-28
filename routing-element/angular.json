@@ -27,13 +27,15 @@
               "projects/test-app/src/assets"
             ],
             "styles": [
-              "projects/test-app/src/styles.scss"
+              "projects/test-app/src/styles.scss",
+              "dist/custom-elements/styles.css"
             ],
             "scripts":  [
              
-            "dist/custom-elements/polyfills-es2017.js",
-            "dist/custom-elements/runtime-es2017.js",
-            "dist/custom-elements/main-es2017.js"
+            "dist/custom-elements/runtime.js",
+            "dist/custom-elements/polyfills.js",
+            "dist/custom-elements/main.js",
+            "dist/custom-elements/vendor.js"
             
             ],
             "vendorChunk": true,
@@ -108,19 +110,6 @@
             "scripts": []
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/test-app/tsconfig.app.json",
-              "projects/test-app/tsconfig.spec.json",
-              "projects/test-app/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -159,18 +148,6 @@
             "main": "projects/comp-lib/src/test.ts",
             "tsConfig": "projects/comp-lib/tsconfig.spec.json",
             "karmaConfig": "projects/comp-lib/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/comp-lib/tsconfig.lib.json",
-              "projects/comp-lib/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -272,19 +249,6 @@
               "projects/custom-elements/src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/custom-elements/tsconfig.app.json",
-              "projects/custom-elements/tsconfig.spec.json",
-              "projects/custom-elements/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {

@@ -7,24 +7,25 @@ import { CompLibComponent, CompLibModule } from '@test/comp-lib';
 import { createCustomElement } from '@angular/elements';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CompLibModule
-  ],
-  entryComponents: [CompLibComponent],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        CompLibModule
+    ],
+    providers: [],
+    entryComponents: [AppComponent],
 })
 export class AppModule implements DoBootstrap {
-  constructor(injector: Injector) {
-    const plotsExplorer = createCustomElement(CompLibComponent, {injector});
-    customElements.get('my-custom-element') || customElements.define('my-custom-element', plotsExplorer);
+  constructor(private injector: Injector) {
+    const plotsExplorer = createCustomElement(AppComponent, {injector});
+    customElements.get('my-test') || customElements.define('my-test', plotsExplorer);
   }
   ngDoBootstrap() {
     // do nothing
+    const plotsExplorer = createCustomElement(AppComponent, {injector: this.injector});
+    customElements.get('my-test') || customElements.define('my-test', plotsExplorer);
   }
  }

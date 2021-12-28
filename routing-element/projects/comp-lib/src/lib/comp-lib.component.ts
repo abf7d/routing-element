@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-comp-lib',
@@ -19,11 +20,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompLibComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.router.initialNavigation(); // Manually triggering initial navigation for @angular/elements
   }
-
 }
 
 // <a [routerLink]="[{ outlets: { primary: ['products'],sidebar: ['products'] } }]">

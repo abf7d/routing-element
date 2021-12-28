@@ -11,6 +11,6 @@ import { MyCompBComponent } from './components/my-comp-b/my-comp-b.component';
   imports: [
     CompLibRoutingModule
   ],
-  exports: [CompLibComponent]
+  exports: [CompLibComponent, MyCompAComponent]
 })
 export class CompLibModule { }
